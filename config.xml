@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.fluxonart.reverse" version="0.1.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>FluxOnArt</name>
+    <description>
+      FluxOn Art
+    </description>
+    <author email="toots@rastageeks.org" href="https://github.com/toots">
+        Romain Beauxis
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <preference name="Orientation" value="portrait" />
+    <preference name="SplashScreen" value="screen" />
+    <preference name="SplashScreenDelay" value="3000" />
+    <icon src="res/icon.png" />
+    <platform name="android">
+        <icon density="ldpi"  src="res/android/ldpi.png" />
+        <icon density="mdpi"  src="res/android/mdpi.png" />
+        <icon density="hdpi"  src="res/android/hdpi.png" />
+        <icon density="xhdpi" src="res/android/xhdpi.png" />
+
+        <splash src="res/android/splash-port-hdpi.png"  density="port-hdpi"/>
+        <splash src="res/android/splash-port-ldpi.png"  density="port-ldpi"/>
+        <splash src="res/android/splash-port-mdpi.png"  density="port-mdpi"/>
+        <splash src="res/android/splash-port-xhdpi.png" density="port-xhdpi"/>
+    </platform>
+    <feature name="CameraPreview">
+        <param name="id" value="com.mbppower.camerapreview" />
+        <param name="url" value="https://github.com/mbppower/CordovaCameraPreview.git#:." />
+    </feature>
+</widget>

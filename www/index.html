@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+        <style>
+          .container-fluid, .container {
+            text-align: center;
+          }
+
+          #photo-canvas {
+            margin-top: 23px;
+            margin-bottom: 23px;
+          }
+        </style>
+
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/bootstrap.js"></script>
+        <script type="text/javascript" src="js/fluxon.js"></script>
+        <script type="text/javascript" src="cordova.js"></script>
+
+        <script type="text/javascript">
+          var fluxon = new FluxOn;
+        </script>
+
+        <title>FluxOnArt</title>
+    </head>
+    <body>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-offset-2 col-md-8">
+            <img id="photo-canvas">
+            <div class="col-md-offset-4 col-md-4">
+              <h3>FluxOnArt</h3>
+              <p id="infobox" class="bg-info">
+                You know the day destroys the night..
+              </p>
+              <button type="button" class="btn btn-success" disabled="disabled" id="invert">
+                Break on through..
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </body>
+</html>
