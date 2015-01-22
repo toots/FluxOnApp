@@ -1,48 +1,17 @@
-quotes = [ {
-  first: "You know the day destroys the night..",
-  last:  "Night divides the day"
-}, {
-  first: "Tried to run..",
-  last:  "Tried to hide"
-}, {
-  first: "We chased our pleasures here..",
-  last:  "Dug our treasures there"
-}, {
-  first: "But can you still recall..",
-  last:  "The time we cried "
-}, {
-  first: "I found an island in your arms..",
-  last:  "Country in your eyes"
-}, {
-  first: "Arms that chain..",
-  last:  "Eyes that lie"
-}, {
-  first: "Made the scene..",
-  last:  "Week to week"
-}, {
-  first: "Day to day..",
-  last:  "Hour to hour"
-}, {
-  first: "The gate is straight..",
-  last:  "Deep and wide"
-} ]
-
 class window.FluxOn
   constructor: ->
     document.addEventListener "deviceready", @onReady, false
-    @quoteIndex = 0
 
   onReady: =>
     $("#invert").prop "disabled", false
 
     $("#invert").click =>
       if @isInverting()
-        @quoteIndex = (@quoteIndex + 1) % quotes.length
-        $("#infobox").text quotes[@quoteIndex].first
+        $("#infobox").text "You know the day destroys the night.."
         $("#invert").removeClass("btn-danger").addClass("btn-success").text "Break on through"
         cordova.plugins.camerapreview.setColorEffect "none"
       else
-        $("#infobox").text quotes[@quoteIndex].last
+        $("#infobox").text "Night divides the day"
         $("#invert").removeClass("btn-success").addClass("btn-danger").text "To the other side"
         cordova.plugins.camerapreview.setColorEffect "negative"
 
@@ -52,8 +21,9 @@ class window.FluxOn
     $("#invert").hasClass "btn-danger"
 
   setUpVideo: =>
-    width  = parseInt($(window).width()*0.9)
-    height = width
+    marginTop = parseInt $("#photo-canvas").css("margin-top"), 10
+    width  = $(window).width()-2*marginTop
+    height = $(window).height()-$("#controls").outerHeight(true)-marginTop
 
     $("#photo-canvas").width  width
     $("#photo-canvas").height height
