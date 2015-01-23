@@ -21,8 +21,9 @@ class window.FluxOn
     $("#invert").hasClass "btn-danger"
 
   setUpVideo: =>
-    width  = parseInt($(window).width()*0.9)
-    height = width
+    marginTop = parseInt $("#photo-canvas").css("margin-top"), 10
+    width  = $(window).width()-2*marginTop
+    height = $(window).height()-$("#controls").outerHeight(true)-marginTop
 
     $("#photo-canvas").width  width
     $("#photo-canvas").height height

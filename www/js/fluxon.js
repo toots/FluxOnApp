@@ -31,9 +31,10 @@
     };
 
     FluxOn.prototype.setUpVideo = function() {
-      var height, left, rect, top, width, _ref;
-      width = parseInt($(window).width() * 0.9);
-      height = width;
+      var height, left, marginTop, rect, top, width, _ref;
+      marginTop = parseInt($("#photo-canvas").css("margin-top"), 10);
+      width = $(window).width() - 2 * marginTop;
+      height = $(window).height() - $("#controls").outerHeight(true) - marginTop;
       $("#photo-canvas").width(width);
       $("#photo-canvas").height(height);
       _ref = $("#photo-canvas").offset(), left = _ref.left, top = _ref.top;
