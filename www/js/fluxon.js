@@ -14,12 +14,10 @@
       $("#invert").prop("disabled", false);
       $("#invert").click(function() {
         if (_this.isInverting()) {
-          $("#infobox").text("You know the day destroys the night..");
-          $("#invert").removeClass("btn-danger").addClass("btn-success").text("Break on through");
+          $("#invert").removeClass("btn-danger").addClass("btn-success").text("Negative");
           return cordova.plugins.camerapreview.setColorEffect("none");
         } else {
-          $("#infobox").text("Night divides the day");
-          $("#invert").removeClass("btn-success").addClass("btn-danger").text("To the other side");
+          $("#invert").removeClass("btn-success").addClass("btn-danger").text("Energy");
           return cordova.plugins.camerapreview.setColorEffect("negative");
         }
       });

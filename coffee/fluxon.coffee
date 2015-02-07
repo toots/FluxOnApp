@@ -7,12 +7,10 @@ class window.FluxOn
 
     $("#invert").click =>
       if @isInverting()
-        $("#infobox").text "You know the day destroys the night.."
-        $("#invert").removeClass("btn-danger").addClass("btn-success").text "Break on through"
+        $("#invert").removeClass("btn-danger").addClass("btn-success").text "Negative"
         cordova.plugins.camerapreview.setColorEffect "none"
       else
-        $("#infobox").text "Night divides the day"
-        $("#invert").removeClass("btn-success").addClass("btn-danger").text "To the other side"
+        $("#invert").removeClass("btn-success").addClass("btn-danger").text "Energy"
         cordova.plugins.camerapreview.setColorEffect "negative"
 
     @setUpVideo()
