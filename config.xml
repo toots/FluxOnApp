@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.fluxonart.reverse" version="0.3.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.fluxonart.reverse" version="0.4.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>FluxOnArt</name>
     <description>
       FluxOn Art
@@ -48,10 +48,6 @@
         <splash height="1334" src="res/ios/Default-667h.png" width="750" />
         <splash height="2208" src="res/ios/Default-736h.png" width="1242" />
     </platform>
-    <feature name="CameraPreview">
-        <param name="id" value="com.mbppower.camerapreview" />
-        <param name="url" value="https://github.com/mbppower/CordovaCameraPreview.git#:." />
-    </feature>
     <cdv:engine id="android" />
     <cdv:engine id="ios" />
 </widget>

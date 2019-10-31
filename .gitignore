@@ -4,3 +4,4 @@ platforms/*
 plugins/*
 .*sw*
 .DS_Store
+node_modules/
